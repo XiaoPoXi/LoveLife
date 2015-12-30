@@ -1,0 +1,314 @@
+{\rtf1\ansi\ansicpg936\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset134 STHeitiSC-Light;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 AppleColorEmoji;\f4\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red110\green32\blue13;\red180\green0\blue98;\red68\green137\blue147;
+\red77\green0\blue158;\red46\green13\blue110;\red0\green11\blue255;\red100\green56\blue32;\red29\green133\blue25;
+\red92\green38\blue153;\red48\green111\blue121;\red186\green0\blue17;\red32\green60\blue63;\red255\green39\blue18;
+\red47\green47\blue47;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww27200\viewh16580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs78 \cf0 =========12.30======\
+\
+1.\'d1\'a7\'b5\'bd\'c1\'cb\'d0\'c2\'b5\'c4\'bf\'d8\'bc\'fe\'a3\'acsegmentedController\'d3\'c3\'c0\'b4\'c9\'e8\'d6\'c3\'b6\'a5\'b2\'bf\'b7\'d6\'c0\'b8\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs24 \cf0 {{\NeXTGraphic Pasted Graphic.tiff \width6920 \height2920
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs78 \cf0 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2\fs22 \cf2 \CocoaLigature0 #pragma mark -
+\f0 \'b4\'b4\'bd\'a8
+\f2 UI\
+\cf0 -(\cf3 void\cf0 )createUI\{\
+    \
+    \cf4 _scrollView\cf0  = [[\cf5 UIScrollView\cf0  \cf6 alloc\cf0 ] \cf6 initWithFrame\cf0 :\cf6 CGRectMake\cf0 (\cf7 0\cf0 , \cf7 0\cf0 , \cf8 SCREEN_W\cf0 , \cf8 SCREEN_H\cf0 )];\
+    \cf9 //
+\f0 \'c9\'e8\'d6\'c3\'b7\'d6\'d2\'b3
+\f2 \cf0 \
+    \cf4 _scrollView\cf0 .\cf10 pagingEnabled\cf0 = \cf3 YES\cf0 ;\
+    \cf4 _scrollView\cf0 .\cf10 delegate\cf0  = \cf3 self\cf0 ;\
+    [\cf3 self\cf0 .\cf10 view\cf0  \cf6 addSubview\cf0 :\cf4 _scrollView\cf0 ];\
+    \cf9 //
+\f0 \'c9\'e8\'d6\'c3
+\f2 contentsize\cf0 \
+    \cf4 _scrollView\cf0 .\cf10 contentSize\cf0  = \cf6 CGSizeMake\cf0 (\cf8 SCREEN_W\cf0  * \cf7 2\cf0 , \cf8 SCREEN_H\cf0 );\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs78 \cf0 \CocoaLigature1 \'d0\'e8\'d2\'aa\'d7\'a2\'d2\'e2\'b5\'c4\'b5\'d8\'b7\'bd
+\f2\fs22 \CocoaLigature0      
+\f0\fs68 \'bd\'ab
+\fs54 \'c9\'cf\'c3\'e6\'b5\'c4
+\f2\fs48 \cf6 CGSizeMake\cf0 (\cf8 SCREEN_W\cf0  * \cf7 2\cf0 , \cf8 SCREEN_H\cf0 );
+\f0\fs54 \'ba\'f3\'d2\'bb\'b8\'f6\'b2\'ce\'ca\'fd\'c9\'e8\'d6\'c3\'ce\'aa0   \'b7\'c5\'d6\'c3\'d3\'eb\'ba\'f3\'c3\'e6\'b5\'c4tableview\'b3\'e5\'cd\'bb
+\f2 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\fs22 \cf0 \
+    \cf9 //
+\f0 \'d2\'fe\'b2\'d8\'d6\'b8\'ca\'be\'cc\'f5
+\f2 \cf0 \
+    \cf4 _scrollView\cf0 .\cf10 showsHorizontalScrollIndicator\cf0  = \cf3 NO\cf0 ;\
+    \
+    \cf9 //
+\f0 \'ca\'b5\'c0\'fd\'bb\'af\'d7\'d3\'bf\'d8\'d6\'c6\'c6\'f7
+\f2 \cf0 \
+    \
+    \cf11 ArticalViewController\cf0  *articalVC = [[\cf11 ArticalViewController\cf0  \cf6 alloc\cf0 ] \cf6 init\cf0 ];\
+    \cf11 YuLuViewController\cf0  * yuluVC = [[\cf11 YuLuViewController\cf0  \cf6 alloc\cf0 ] \cf6 init\cf0 ];\
+    \cf9 //
+\f0 \'bd\'ab\'bf\'d8\'d6\'c6\'c6\'f7\'b7\'c5\'c8\'eb\'ca\'fd\'d7\'e9\'b9\'dc\'c0\'ed
+\f2 \cf0 \
+    \cf5 NSArray\cf0  *VCArray = \cf7 @[\cf0 articalVC,yuluVC\cf7 ]\cf0 ;\
+    \
+    \cf9 //
+\f0 \'b9\'f6\'b6\'af
+\f2 ing
+\f0 \'ca\'bd\'bf\'f2\'bc\'dc\'b5\'c4\'ca\'b5\'cf\'d6
+\f2 \cf0 \
+    \cf3 int\cf0  i = \cf7 0\cf0 ;\
+    \cf3 for\cf0  (\cf5 UIViewController\cf0  * vc \cf3 in\cf0  VCArray) \{\
+        vc.\cf10 view\cf0 .\cf10 frame\cf0  = \cf6 CGRectMake\cf0 (i * \cf8 SCREEN_W\cf0 , \cf7 0\cf0 , \cf8 SCREEN_W\cf0 , \cf8 SCREEN_H\cf0 );\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs78 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f2\fs22 \cf0 \CocoaLigature0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0 \
+        \
+        [\cf3 self\cf0  \cf6 addChildViewController\cf0 :vc];\
+        [\cf4 _scrollView\cf0  \cf6 addSubview\cf0 :vc.\cf10 view\cf0 ];\
+        i++;\
+        \
+    \}\
+    \
+    \
+\}\
+\cf2 #pragma mark - scrollview 
+\f0 \'b9\'d8\'c1\'aa
+\f2 segment  
+\f0 \'ca\'b5\'cf\'d6\'d5\'e2\'b8\'f6\'b4\'fa\'c0\'ed
+\f2 \
+\cf0 - (\cf3 void\cf0 )scrollViewDidScroll:(\cf5 UIScrollView\cf0  *)scrollView;\
+\{\
+    \cf4 _segmentedControl\cf0 .\cf10 selectedSegmentIndex\cf0  = scrollView.\cf10 contentOffset\cf0 .\cf10 x\cf0  / \cf8 SCREEN_W\cf0  ;\
+    \
+\}\
+\
+\
+\cf2 #pragma mark - 
+\f0 \'b1\'ea\'cc\'e2
+\f2 \
+\cf0 -(\cf3 void\cf0 )settingNav\{\
+    \
+    \cf4 _segmentedControl\cf0  = [[\cf5 UISegmentedControl\cf0  \cf6 alloc\cf0 ] \cf6 initWithFrame\cf0 :\cf6 CGRectMake\cf0 (\cf7 0\cf0 , \cf7 0\cf0 , \cf7 100\cf0 , \cf7 26\cf0 )];\
+    \cf9 //
+\f0 \'b2\'e5\'c8\'eb\'b1\'ea\'cc\'e2
+\f2 \cf0 \
+    [\cf4 _segmentedControl\cf0  \cf6 insertSegmentWithTitle\cf0 :\cf12 @"
+\f0 \'c3\'c0\'ce\'c4
+\f2 "\cf0  \cf6 atIndex\cf0 :\cf7 0\cf0  \cf6 animated\cf0 :\cf3 YES\cf0 ];\
+    [\cf4 _segmentedControl\cf0  \cf6 insertSegmentWithTitle\cf0 :\cf12 @"
+\f0 \'d3\'ef\'c2\'bc
+\f2 "\cf0  \cf6 atIndex\cf0 :\cf7 1\cf0  \cf6 animated\cf0 :\cf3 YES\cf0 ];\
+    \cf9 //shezhi
+\f0 \'c9\'e8\'d6\'c3\'d7\'d6\'cc\'e5\'d1\'d5\'c9\'ab
+\f2 \cf0 \
+    \cf4 _segmentedControl\cf0 .\cf10 tintColor\cf0  = [\cf5 UIColor\cf0  \cf6 whiteColor\cf0 ];\
+    \cf9 //
+\f0 \'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab
+\f2 \cf0 \
+\cf9 //    _segmentedControl.backgroundColor\cf0 \
+    \
+    \cf9 //
+\f0 \'c9\'e8\'d6\'c3\'c4\'ac\'c8\'cf\'d1\'a1\'d6\'d0\'b5\'da\'d2\'bb\'b8\'f6\'b1\'ea\'cc\'e2
+\f2 \cf0 \
+    \cf4 _segmentedControl\cf0 .\cf10 selectedSegmentIndex\cf0  = \cf7 0\cf0 ;\
+    \
+    \cf9 //
+\f0 \'cc\'ed\'bc\'d3\'cf\'ec\'d3\'a6\'b7\'bd\'b7\'a8
+\f2 \cf0 \
+    [\cf4 _segmentedControl\cf0  \cf6 addTarget\cf0 :\cf3 self\cf0  \cf6 action\cf0 :\cf3 @selector\cf0 (changeOption:) \cf6 forControlEvents\cf0 :\cf6 UIControlEventValueChanged\cf0 ];\
+    \
+    \cf3 self\cf0 .\cf10 navigationItem\cf0 .\cf10 titleView\cf0  = \cf4 _segmentedControl\cf0 ;\
+    \
+    \
+\}\
+\
+\cf9 //
+\f0 \'cf\'ec\'d3\'a6\'b7\'bd\'b7\'a8
+\f2 \cf0 \
+-(\cf3 void\cf0 )changeOption:(\cf5 UISegmentedControl\cf0  *)segment\{\
+    \
+    \cf3 if\cf0  (segment.\cf10 selectedSegmentIndex\cf0  == \cf7 1\cf0 ) \{\
+        \cf4 _scrollView\cf0 .\cf10 contentOffset\cf0  = \cf6 CGPointMake\cf0 (\cf8 SCREEN_W\cf0 , \cf7 0\cf0 );\
+        \
+    \}\cf3 else\cf0 \{\
+        \cf4 _scrollView\cf0 .\cf10 contentOffset\cf0  = \cf6 CGPointMake\cf0 (\cf7 0\cf0 , \cf7 0\cf0 );\
+\
+    \}\
+    \
+\}
+\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs78 \cf0 \CocoaLigature1 2.\'c9\'e8\'d6\'c3\'c7\'b0\'bd\'f8\'ba\'f3\'cd\'cb\'b0\'b4\'c5\'a5\'b5\'c4\'b7\'bd\'b7\'a8\'ba\'dc\'bc\'f2\'b5\'a5\'b0\'a1\'a3\'ac\'d6\'b5\'b5\'c3\'d1\'a7\'cf\'b0\'a3\'ac\'b2\'bb\'d0\'e8\'d2\'aa\'d4\'d9\'c8\'a5\'c3\'bf\'b8\'f6\'d2\'b3\'c3\'e6\'c9\'e8\'d6\'c3\'a3\'ac\'b6\'a8\'d2\'e5\'d2\'bb\'b8\'f6\'d7\'dc\'b5\'c4\'a3\'ac\'d6\'b1\'bd\'d3\'c8\'a5\'b5\'f7\'d3\'c3\'d0\'de\'b8\'c4\'b3\'c9\'d7\'d4\'bc\'ba\'cf\'eb\'d2\'aa\'b5\'c4\'c4\'a3\'d1\'f9\'a1\'a3\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2\fs26 \cf9 \CocoaLigature0 //tian
+\f0 \'cc\'ed\'bc\'d3\'cf\'ec\'d3\'a6\'ca\'c2\'bc\'fe
+\f2 \cf0 \
+-(\cf3 void\cf0 ) setleftButtonClick:(\cf3 SEL\cf0 )selector;\{\
+    \
+    [\cf3 self\cf0 .\cf4 leftButton\cf0  \cf6 addTarget\cf0 :\cf3 self\cf0  \cf6 action\cf0 :selector \cf6 forControlEvents\cf0 :\cf6 UIControlEventTouchUpInside\cf0 ];\
+    \
+\}\
+-(\cf3 void\cf0 ) setrightButtonClick:(\cf3 SEL\cf0 )selector;\{\
+    \
+    [\cf3 self\cf0 .\cf4 rightButton\cf0  \cf6 addTarget\cf0 :\cf3 self\cf0  \cf6 action\cf0 :selector \cf6 forControlEvents\cf0 :\cf6 UIControlEventTouchUpInside\cf0 ];\
+\
+\}\
+
+\fs30 \cf2 #pragma mark --- 
+\f0 \'c9\'e8\'d6\'c3\'b5\'bc\'ba\'bd
+\f2 \
+\cf0 -(\cf3 void\cf0 )settingNav\{\
+    \
+    \cf3 self\cf0 .\cf4 titleLabel\cf0 .\cf10 text\cf0  = \cf12 @"
+\f0 \'b0\'ae
+\f2 "\cf0 ;\
+    [\cf3 self\cf0 .\cf4 leftButton\cf0  \cf6 setImage\cf0 :[\cf5 UIImage\cf0  \cf6 imageNamed\cf0 :\cf12 @"icon_function.png"\cf0 ] \cf6 forState\cf0 :\cf6 UIControlStateNormal\cf0 ];\
+    [\cf3 self\cf0 .\cf4 rightButton\cf0  \cf6 setImage\cf0 :[\cf5 UIImage\cf0  \cf6 imageNamed\cf0 :\cf12 @"2vm.png"\cf0 ] \cf6 forState\cf0 :\cf6 UIControlStateNormal\cf0 ];\
+    \cf9 //    
+\f0 \'c9\'e8\'d6\'c3\'cf\'ec\'d3\'a6\'ca\'c2\'bc\'fe
+\f2 \cf0 \
+    [\cf3 self\cf0  \cf13 setleftButtonClick\cf0 :\cf3 @selector\cf0 (leftBtnClick)];\
+    [\cf3 self\cf0  \cf13 setrightButtonClick\cf0 :\cf3 @selector\cf0 (rightBtnClick)];\
+    \
+\}
+\f0\fs72 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs78 \cf0 \
+3.\'d5\'e2\'b8\'f6\'bf\'f2\'bc\'dc\'ba\'dc\'ba\'c3\'d3\'c3 
+\f3 \uc0\u55357 \u56844 
+\f0 \'ba\'c3\'b0\'a1\'ba\'c3\'d1\'a7\'cf\'b0\'d6\'ae~
+\f2\fs56 \cf11 \CocoaLigature0 FactoryUI
+\f0\fs78 \cf0 \CocoaLigature1 \
+\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f2\fs36 \cf0 \CocoaLigature0  \cf9 =======
+\f0   \'c9\'e8\'d6\'c3\'cd\'bc\'c6\'ac   ======= 
+\f2 \cf0 \
+\pard\tx866\pardeftab866\pardirnatural
+
+\fs32 \cf0     \cf4 _headerImageView\cf0  = [\cf11 FactoryUI\cf0  \cf13 createImageViewWithFrame\cf0 :\cf6 CGRectMake\cf0 (\cf7 0\cf0 , \cf7 0\cf0 , \cf8 SCREEN_W\cf0 , \cf8 SCREEN_H\cf0  / \cf7 3\cf0 ) \cf13 imageName\cf0 :\cf3 nil\cf0 ];\
+  \cf4 _tableView\cf0 .\cf10 tableHeaderView\cf0  = \cf4 _headerImageView\cf0 ;
+\fs36 \
+ ======  
+\f0 \'c9\'e8\'d6\'c3
+\f2 label   =====\
+\pard\tx866\pardeftab866\pardirnatural
+
+\fs30 \cf0     \cf4 _headerLabel\cf0  = [\cf11 FactoryUI\cf0  \cf13 createLabelWithFrame\cf0 :\cf6 CGRectMake\cf0 (\cf7 0\cf0 , \cf4 _headerImageView\cf0 .\cf10 frame\cf0 .\cf10 size\cf0 .\cf10 height\cf0  - \cf7 40\cf0 , \cf8 SCREEN_W\cf0 , \cf7 40\cf0 ) \cf13 text\cf0 :\cf3 nil\cf0  \cf13 textColor\cf0 :[\cf5 UIColor\cf0  \cf6 whiteColor\cf0 ] \cf13 font\cf0 :[\cf5 UIFont\cf0  \cf6 systemFontOfSize\cf0 :\cf7 20\cf0 ]];
+\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+======= 
+\f0 \'c9\'e8\'d6\'c3
+\f2 button  =======\
+\pard\tx866\pardeftab866\pardirnatural
+
+\fs32 \cf5 UIButton\cf0  *priceButton = [\cf11 FactoryUI\cf0  \cf13 createButtonWithFrame\cf0 :\cf6 CGRectMake\cf0 (\cf8 SCREEN_W\cf0  - \cf7 60\cf0 , \cf7 10\cf0 , \cf7 50\cf0 , \cf7 40\cf0 ) \cf13 title\cf0 :\cf3 nil\cf0  \cf13 titleColor\cf0 :[\cf5 UIColor\cf0  \cf6 darkGrayColor\cf0 ] \cf13 imageName\cf0 :\cf3 nil\cf0  \cf13 backgroundImageName\cf0 :\cf3 nil\cf0  \cf13 target\cf0 :\cf3 self\cf0  \cf13 selector\cf0 :\cf3 @selector\cf0 (priceButtonClick)];\
+    priceButton.\cf10 titleLabel\cf0 .\cf10 font\cf0  = [\cf5 UIFont\cf0  \cf6 systemFontOfSize\cf0 :\cf7 14\cf0 ];
+\fs36 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs78 \cf0 \CocoaLigature1 4.\'cd\'f8\'c2\'e7\'bb\'f1\'c8\'a1\'ca\'fd\'be\'dd\'bd\'e2\'ce\'f6\'b2\'bb\'b3\'f6\'c0\'b4\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'bf\'bc\'c2\'c7\'d2\'bb\'cf\'c2\'ca\'fd\'be\'dd\'b8\'f1\'ca\'bd\'a1\'aa\'a1\'aa\'a1\'aa\'a1\'b7
+\f2\fs36 \cf12 \CocoaLigature0 text/html\cf0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf11 AFHTTPRequestOperationManager\cf0  * manger = [\cf11 AFHTTPRequestOperationManager\cf0  \cf13 manager\cf0 ];\
+    \cf9 //
+\f0 \'ca\'d6\'b6\'af\'c9\'e8\'d6\'c3\'ca\'fd\'be\'dd\'b8\'f1\'ca\'bd
+\f2 \cf0 \
+    manger.\cf4 responseSerializer\cf0 .\cf4 acceptableContentTypes\cf0  = [\cf5 NSSet\cf0  \cf6 setWithObjects\cf0 :\cf12 @"text/html"\cf0 , \cf3 nil\cf0 ];\
+    \
+    \
+    [manger \cf13 GET\cf0 :[\cf5 NSString\cf0  \cf6 stringWithFormat\cf0 :\cf8 ARTICALURL\cf0  , \cf4 _page\cf0 ] \cf13 parameters\cf0 :\cf3 nil\cf0  \cf13 success\cf0 :^(\cf11 AFHTTPRequestOperation\cf0  *operation, \cf3 id\cf0  responseObject) \{\
+        \
+    \} \cf13 failure\cf0 :^(\cf11 AFHTTPRequestOperation\cf0  *operation, \cf5 NSError\cf0  *error) \{\
+        \
+    \}];\
+\}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs78 \cf0 \CocoaLigature1 5.MJRefresh\'cb\'a2\'d0\'c2\'b5\'c4\'c9\'fd\'bc\'b6\'a3\'ac\'d0\'e8\'d2\'aa\'d7\'a2\'d2\'e2\'b5\'c4\'ca\'c7\'ca\'f4\'d0\'d4\'c3\'fb\'d7\'d6\'b5\'c4\'b8\'c4\'b1\'e4\'a1\'aa===\'a1\'b7
+\f2\fs36 \CocoaLigature0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf4 _tableView\cf0 .\cf4 header\cf0  = [
+\fs60 \cf14 MJRefreshNormalHeader
+\fs36 \cf0  \cf13 headerWithRefreshingTarget\cf0 :\cf3 self\cf0  \cf13 refreshingAction\cf0 :\cf3 @selector\cf0 (loadNewData)];\
+    \cf4 _tableView\cf0 .\cf4 footer\cf0  = [
+\fs60 \cf14 MJRefreshAutoFooter
+\fs36 \cf0  \cf13 footerWithRefreshingTarget\cf0 :\cf3 self\cf0  \cf13 refreshingAction\cf0 :\cf3 @selector\cf0 (loadMoreData)];\
+    [\cf4 _tableView\cf0 .\cf4 header\cf0  \cf13 beginRefreshing\cf0 ];\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs78 \cf0 \CocoaLigature1 6.youm\'d3\'d1\'c3\'cb\'b7\'d6\'cf\'ed\'b4\'f2\'b0\'fc\'ca\'a7\'b0\'dc\'b5\'c4\'d2\'bb\'b8\'f6\'d4\'ad\'d2\'f2  \'a1\'aa no
+\f2\fs36 \CocoaLigature0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 {{\NeXTGraphic 1__#$!@%!#__Pasted Graphic.tiff \width10520 \height3860
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 \
+\
+\
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs78 \cf0 6.youm\'d3\'d1\'c3\'cb\'b7\'d6\'cf\'ed\'d0\'e8\'d2\'aa\'bc\'d3\'c8\'eb\'b5\'c4\'bf\'e2\'ce\'c4\'bc\'fe\'c9\'b6\'c9\'b6\'c9\'b6\'b5\'c4
+\f3 \uc0\u55357 \u56850 
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj
+\ls1\ilvl0
+\f4\fs28 \cf15 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+Security.framework\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+libiconv.dylib\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+SystemConfiguration.framework\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+CoreGraphics.Framework\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+libsqlite3.dylib\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+CoreTelephony.framework\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+libstdc++.dylib\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+libz.dylib
+\f2\fs36 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0 \
+}
