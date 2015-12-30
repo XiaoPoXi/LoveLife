@@ -7,6 +7,9 @@
 //
 
 #import "RootViewController.h"
+#import "ArticalViewController.h"
+#import "YuLuViewController.h"
+
 
 @interface ReadViewController : RootViewController
 

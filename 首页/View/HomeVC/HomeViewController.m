@@ -16,7 +16,7 @@
 
 #import "HomeModel.h"
 #import "HomeCell.h"
-
+#import "HomeDetailViewController.h"
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -48,7 +48,7 @@
 }
 
 -(void)createRefresh{
-    _tableView.header = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(LoadNewData)];
+    _tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(LoadNewData)];
     
     _tableView.footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(LoadMoreData)];
     
@@ -150,6 +150,21 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    HomeDetailViewController * vc = [[HomeDetailViewController alloc] init];
+    //正向传值-----》到详情页
+    HomeModel *model = self.dataArray[indexPath.row];
+    vc.dataI = model.dataID;
+    
+    
+    
+    //tabbar的隐藏
+    vc.hidesBottomBarWhenPushed = YES;
+    
+    
+    
+    
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - 创建tableview头视图

@@ -12,6 +12,14 @@
 #import "MMDrawerController.h"//添加抽提
 
 #import "LeftViewController.h"
+//分享
+//qq weixin weibo
+#import "UMSocialQQHandler.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialSinaHandler.h"
+
+
+
 
 @interface AppDelegate ()
 
@@ -47,9 +55,40 @@
     self.window.rootViewController = drawerVC;
     
     
+    //添加友盟
+    [self addUM];
+    
+    
+    
     
     return YES;
 }
+
+-(void)addUM{
+    
+    //注册友盟
+//    APPKEY @"566cf4ebe0f55a23e5007be9"
+//    
+//    QQ: appid:1104908293
+//    appkey:MnGtpPN5AiB6MNvj
+//    
+//    weixin:appid:wx12b249bcbf753e87
+//    app secret:0a9cd00c48ee47a9b23119086bcd3b30
+    [UMSocialData setAppKey:APPKEY];
+    //she设置qq的APPID APPKEY url
+    [UMSocialQQHandler setQQWithAppId:@"1104908293" appKey:@"MnGtpPN5AiB6MNvj" url:@"http://www.apple.com"];
+    //微信的设置
+    [UMSocialWechatHandler setWXAppId:@"wx12b249bcbf753e87" appSecret:@"0a9cd00c48ee47a9b23119086bcd3b30" url:@"http://www.apple.com"];
+    //打开微博的SSO开关
+    [UMSocialSinaHandler openSSOWithRedirectURL:@"http://www.apple.com"];
+    
+    //隐藏未安装的客户端  --- 针对于腾讯小贱人
+    [UMSocialConfig hiddenNotInstallPlatforms:@[UMShareToQQ,UMShareToQzone,UMShareToWechatSession,UMShareToLWTimeline]];
+    
+    
+}
+
+
 
 - (void)createGuidePage
 {
