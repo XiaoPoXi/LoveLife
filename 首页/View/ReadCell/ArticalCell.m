@@ -18,38 +18,7 @@
 }
 
 -(void)createUI{
-  /*
-    _imageView = [FactoryUI createImageViewWithFrame:CGRectMake(10, 10, 120, 90) imageName:nil];
-
-    [self.contentView addSubview:_imageView];
-    
-    //时间
-    _timeLabel = [FactoryUI createLabelWithFrame:CGRectMake(10, _imageView.frame.origin.y + 20, 120, 20) text:nil textColor:[UIColor redColor] font:[UIFont systemFontOfSize:18]];
-    
-    _timeLabel.textAlignment = NSTextAlignmentLeft;
-    [self.contentView addSubview:_timeLabel];
-
-//    zuo作者
-    _authorLabel = [FactoryUI createLabelWithFrame:CGRectMake(SCREEN_W - 120, _timeLabel.frame.origin.y, 110, 20) text:nil textColor:[UIColor darkGrayColor] font:[UIFont systemFontOfSize:14]];
-    _timeLabel.textAlignment = NSTextAlignmentLeft;
-    [self.contentView addSubview:_authorLabel];
-    
-    
-
-    
-//    标题
-    _timeLabel = [FactoryUI createLabelWithFrame:CGRectMake( _imageView.frame.origin.x + _imageView.frame.size.width , 30, 200,40) text:nil textColor:[UIColor darkGrayColor] font:[UIFont systemFontOfSize:14]];
-    _timeLabel.textAlignment = NSTextAlignmentLeft;
-    
-    [self.contentView addSubview:_timeLabel];
-    
-    
-    //
-    _titleLabel.numberOfLines = 0;
-    _titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    
-    [self.contentView addSubview:_titleLabel];
- */
+  
     _imageView = [FactoryUI createImageViewWithFrame:CGRectMake(10, 10, 120, 90) imageName:nil];
     [self.contentView addSubview:_imageView];
     
